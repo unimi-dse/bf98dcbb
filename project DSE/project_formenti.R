@@ -17,25 +17,24 @@
 #need to document the function which runs the interface.
 #3) Code quality: Coding style and modularity
 
-#this function import online dataset
+#this function imports online datasets
 set_data=function() {
-  canada_ab<<-read.csv(url('https://vincentarelbundock.github.io/Rdatasets/csv/carData/CES11.csv'),sep=',',header = T)[-1]
+  canada_ab<<-read.csv(url('https://raw.githubusercontent.com/unimi-dse/bf98dcbb/master/project%20DSE/canada_ab.csv'),sep=',',header = T)[-1]
   colnames(canada_ab)[4]<<-'weights'
-  cw=read.csv(url('https://vincentarelbundock.github.io/Rdatasets/csv/datasets/ChickWeight.csv'), sep=',',header=T)[-1]
+  cw=read.csv(url('https://raw.githubusercontent.com/unimi-dse/bf98dcbb/master/project%20DSE/chicken_weight.csv'), sep=',',header=T)[-1]
   chicken_weight<<-cbind(cw,random=rnorm(length(cw$weight)))
-  electric_d<<-read.csv(url('https://vincentarelbundock.github.io/Rdatasets/csv/fpp2/elecdemand.csv'),header=T)[-1]
+  electric_d<<-read.csv(url('https://raw.githubusercontent.com/unimi-dse/bf98dcbb/master/project%20DSE/electric_d.csv'),header=T)[-1]
   #Total electricity demand in GW for Victoria, Australia, every half-hour during 2014.
-  #WorkDay:	taking value 1 on work days, and 0 otherwise.a=read.csv('https://vincentarelbundock.github.io/Rdatasets/csv/Ecdat/Produc.csv')[-1]
+  #WorkDay:	taking value 1 on work days, and 0 otherwise.
   electric_d$WorkDay<<-as.character(electric_d$WorkDay)
   attach(canada_ab)
   attach(chicken_weight)
   attach(electric_d)
 }
 
-#analysis:
-# absolute and relative frequency of abortion opinion
 
-############
+#################
+
 #this function computes the relative or absolute frequency of the view 
 #on abortion
 abort_freq=function(rel=F) {
@@ -181,5 +180,5 @@ plot_ds=function(dataset,x=NULL) {
   else {cat('please specify a dataset among \'chicken_weight\',\'canada_ab\',\'electric_d\' and a x argument')}
 }
 
-
+############################################
 
