@@ -18,7 +18,7 @@
 #3) Code quality: Coding style and modularity
 
 #this function import online dataset
-imp_data=function() {
+set_data=function() {
   canada_ab<<-read.csv(url('https://vincentarelbundock.github.io/Rdatasets/csv/carData/CES11.csv'),sep=',',header = T)[-1]
   colnames(canada_ab)[4]<<-'weights'
   cw=read.csv(url('https://vincentarelbundock.github.io/Rdatasets/csv/datasets/ChickWeight.csv'), sep=',',header=T)[-1]
@@ -93,7 +93,7 @@ hello=function() {
 #################### ok #############
 
 #it imports the packages
-imp_pack=function() {
+set_pack=function() {
   install.packages('magick')
   require(magick)
   install.packages('tidyverse')
@@ -165,19 +165,21 @@ plot_ds=function(dataset,x=NULL) {
         scale_colour_manual(values=c('No'='indianred2','Yes'='lightgreen'))+
         labs(title=paste('Percentage of view on abortion conditioned to',xsub),
              x=xsub)} 
-    else {cat('please specify the x argument for the plot among the followuing:\n province, gender, importance, education, urban')}
-  }
+    else {cat('please specify the x argument for the plot among the following:\n province, gender, importance, education, urban')}
+    }
+  else
+    if(ds=='chicken_weight') {
+      if(as.character(xsub) %in% colnames(chicken_weight)[-c(3)] && !is_empty(x)) {
+        ggplot(chicken_weight,aes(y=weight,x=x))+
+          theme_light()+
+          geom_smooth(method='lm',colour='indianred2')+
+          labs(title=paste('Relation between chickens\' weight and',xsub),
+                           x=xsub)
+      }
+      else {cat('please specify the x argument for the plot among the following:\n weight, Time, Diet, random')}
+    }
+  else {cat('please specify a dataset among \'chicken_weight\',\'canada_ab\',\'electric_d\' and a x argument')}
 }
 
 
-ggplot(chicken_weight)+
-  geom_smooth(aes(y=weight,x=Diet))
-
-#population, weights
-
-plot_ds=function(dataset,x=NULL) {
-  ds=substitute(dataset)
-  xsub=substitute(x) 
-  print(ds)
-  print(xsub)}
 
