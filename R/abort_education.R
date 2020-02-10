@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' abort_education('college')
+#' abort_education(x='college')
 #' }
 #'
 #' @export

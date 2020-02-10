@@ -3,13 +3,13 @@
 #' Computes the frequency of the view on abortion from the dataset 'canada_ab',
 #' conditioned to one of the other variables in the dataset.
 #'
-#' @param x characher. Name of the column of the dataset for computing the conditioned frequency
+#' @param x character. Name of a column from the dataset 'canada_ab' for computing the conditioned frequency
 #'
 #' @return list
 #'
 #' @examples
 #' \dontrun{
-#' confreq_abort(gender)
+#' confreq_abort(x=gender)
 #' }
 #'
 #' @export

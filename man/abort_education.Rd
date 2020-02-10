@@ -17,7 +17,7 @@ Computes the absolute frequency of the view on abortion given the education leve
 }
 \examples{
 \dontrun{
-abort_education('college')
+abort_education(x='college')
 }
 
 }

@@ -1,3 +1,20 @@
+#' plot_ds
+#'
+#' It plots the data depending on the dataset used
+#'
+#' @param dataset str. Name of the dataset to plot
+#' @param x char. Name of the column of interest of the dataset to plot
+#'
+#' @return plot
+#'
+#' @examples
+#' \dontrun{
+#' plot_ds(dataset=canada_ab,x=province)
+#' }
+#'
+#' @export
+#'
+
 plot_ds <- function(dataset,x=NULL) {
   ds <- substitute(dataset)
   xsub <- substitute(x)

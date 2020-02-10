@@ -1,3 +1,19 @@
+#' regr_chickw
+#'
+#' Regress a variable z from the dataset 'regr_chickw' on the variable 'weight'.
+#' If the intercept value is non-significant, it computes again the regression without the intercept. It also returns if the regressed variable is significant or not
+#' @param z character. Name of a column from the dataset 'regr_chickw' to regress
+#'
+#' @return table, str
+#'
+#' @examples
+#' \dontrun{
+#' regr_chickw(z=Time)
+#' }
+#'
+#' @export
+#'
+
 regr_chickw <- function(z) {
   s <- substitute(z)
   s2 <- as.character(s)

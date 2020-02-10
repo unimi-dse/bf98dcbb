@@ -7,7 +7,7 @@
 condfreq_abort(x)
 }
 \arguments{
-\item{x}{characher. Name of the column of the dataset for computing the conditioned frequency}
+\item{x}{character. Name of a column from the dataset 'canada_ab' for computing the conditioned frequency}
 }
 \value{
 list
@@ -18,6 +18,7 @@ conditioned to one of the other variables in the dataset.
 }
 \examples{
 \dontrun{
-confreq_abort(gender)
+confreq_abort(x=gender)
 }
+
 }

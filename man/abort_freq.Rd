@@ -19,4 +19,5 @@ Computes the absolute or relative frequency of the view on abortion from the dat
 \dontrun{
 abort_freq(rel=TRUE)
 }
+
 }

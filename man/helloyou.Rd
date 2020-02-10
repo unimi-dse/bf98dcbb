@@ -16,4 +16,5 @@ Asks the user his name and surname and greets him, returning a jpg.
 \dontrun{
 helloyou()
 }
+
 }
