@@ -15,7 +15,7 @@ plot_ds <- function(dataset,x=NULL) {
   else
     if(ds=='canada_ab') {   #it builds a barplot for the database canada_ab,
       #it requires as x argument one of the columns
-      if(as.character(xsub) %in% colnames(canada_ab)[-c(1,3,4,6)] && !is_empty(x)) {  #it evaluates whether
+      if(as.character(xsub) %in% colnames(canada_ab)[-c(1,3,4,6)] && !purrr::is_empty(x)) {  #it evaluates whether
         #x is not empty and it is the name of a column od the dataset
         ggplot2::ggplot(canada_ab,aes(x=x,fill=abortion,colour=abortion))+
           ggplot2::geom_bar(position='fill',alpha=0.7,size=0.8)+
@@ -30,7 +30,7 @@ plot_ds <- function(dataset,x=NULL) {
   else
     if(ds=='chicken_weight') {    #it builds a regression for the database chicken_weight,
       #it requires as x argument the name of a column of the dataset
-      if(as.character(xsub) %in% colnames(chicken_weight)[-c(3)] && !is_empty(x)) {
+      if(as.character(xsub) %in% colnames(chicken_weight)[-c(3)] && !purrr::is_empty(x)) {
         ggplot2::ggplot(chicken_weight,aes(y=weight,x=x))+
           ggplot2::theme_light()+
           ggplot2::geom_smooth(method='lm',colour='indianred2')+

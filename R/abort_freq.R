@@ -6,6 +6,13 @@
 #'
 #' @return table
 #'
+#' @examples
+#' \dontrun{
+#' abort_freq(rel=TRUE)
+#' }
+#'
+#' @export
+#'
 
 abort_freq <- function(rel=FALSE) {
   if(rel==T) {

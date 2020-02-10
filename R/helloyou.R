@@ -4,7 +4,13 @@
 #'
 #' @return your name, surname, jpg file
 #'
+#' @examples
+#' \dontrun{
+#' helloyou()
+#' }
+#'
 #' @export
+#'
 
 helloyou <- function() {
   n <- readline(cat('What\'s your name?\n'))

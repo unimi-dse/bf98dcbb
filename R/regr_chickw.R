@@ -30,4 +30,3 @@ regr_chickw <- function(z) {
     #for z is not correct it gives a hint
   }
 }
-

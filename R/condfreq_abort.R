@@ -7,7 +7,13 @@
 #'
 #' @return list
 #'
+#' @examples
+#' \dontrun{
+#' confreq_abort(gender)
+#' }
+#'
 #' @export
+#'
 
 condfreq_abort <- function(x) {
   y <- substitute(x)

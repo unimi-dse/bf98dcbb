@@ -5,6 +5,14 @@
 #' @param x str. Level of education from the education column in the dataset 'canada_ab'
 #'
 #' @return table
+#'
+#' @examples
+#' \dontrun{
+#' abort_education('college')
+#' }
+#'
+#' @export
+#'
 
 abort_education <- function(x) {
   y <- substitute(x)
