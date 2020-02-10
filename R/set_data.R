@@ -5,8 +5,7 @@ set_data=function() {
   attach(canada_ab)
 
   path2 <- system.file('extdata','chicken_weight.csv',package='PackNy')
-  cw=read.csv(path2, sep=',',header=T)[-1]
-  chicken_weight <<- cbind(cw,random=rnorm(length(cw$weight)))
+  chicken_weight=read.csv(path2, sep=',',header=T)[-1]
   attach(chicken_weight)
 
   path3 <- system.file('extdata','electric_d.csv',package='PackNy')
