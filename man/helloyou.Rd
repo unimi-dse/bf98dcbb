@@ -12,3 +12,8 @@ your name, surname, jpg file
 \description{
 Asks the user his name and surname and greets him, returning a jpg.
 }
+\examples{
+\dontrun{
+helloyou()
+}
+}

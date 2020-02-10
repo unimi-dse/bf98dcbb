@@ -15,3 +15,8 @@ table
 \description{
 Computes the absolute or relative frequency of the view on abortion from the dataset 'canada_ab'
 }
+\examples{
+\dontrun{
+abort_freq(rel=TRUE)
+}
+}

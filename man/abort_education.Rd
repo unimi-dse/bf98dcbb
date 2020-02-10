@@ -15,3 +15,9 @@ table
 \description{
 Computes the absolute frequency of the view on abortion given the education level from the dataset 'canada_ab'
 }
+\examples{
+\dontrun{
+abort_education('college')
+}
+
+}

@@ -16,3 +16,8 @@ list
 Computes the frequency of the view on abortion from the dataset 'canada_ab',
 conditioned to one of the other variables in the dataset.
 }
+\examples{
+\dontrun{
+confreq_abort(gender)
+}
+}
