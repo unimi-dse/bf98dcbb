@@ -42,7 +42,7 @@ regr_chickw <- function(z) {
       }
     }
   } else {
-    cat('Please insert one of the following: Time, Chick, Diet, random') #if the argument
+    cat('Please insert one of the following: Time, Chick, Diet') #if the argument
     #for z is not correct it gives a hint
   }
 }

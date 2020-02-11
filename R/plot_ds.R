@@ -54,7 +54,7 @@ plot_ds <- function(dataset,x=NULL) {
           ggplot2::labs(title=paste('Relation between chickens\' weight and',xsub),
                x=xsub)
       }
-      else {cat('please specify the x argument for the plot among the following:\n weight, Time, Diet, random')}
+      else {cat('please specify the x argument for the plot among the following:\n weight, Time, Diet')}
       #it gives a hint on the name of columns the dataset
     }
   else {cat('please specify a dataset among \'chicken_weight\',\'canada_ab\',\'electric_d\' and a x argument')}
