@@ -4,7 +4,7 @@
 \alias{online_dataset}
 \title{online_dataset}
 \usage{
-online_dataset(URL)
+online_dataset(URL = NULL)
 }
 \arguments{
 \item{URL}{url from 'https://vincentarelbundock.github.io/Rdatasets/datasets.html'}

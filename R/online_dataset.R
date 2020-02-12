@@ -14,7 +14,12 @@
 #' @export
 #'
 
-online_dataset <- function(URL) {
-  data <- read.csv(file=url(URL),header = TRUE,sep=',')[-1]
+online_dataset <- function(URL=NULL) {
+  if(is.null(URL)){
+    return(print('Please insert a valid URL argument'))
+  }
+  else {
+    data <- read.csv(file=url(URL),header = TRUE,sep=',')[-1]
   return(data)
+  }
 }
