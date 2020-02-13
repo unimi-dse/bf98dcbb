@@ -1,6 +1,6 @@
 #' plot_ds
 #'
-#' It plots the data depending on the dataset used
+#' It plots the data depending on the data used
 #'
 #' @param dataset dataframe. Name of the dataset to plot
 #' @param x numeric vector or vector of factors Name of the column

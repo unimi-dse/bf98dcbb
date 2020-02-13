@@ -19,7 +19,7 @@ plot_ds(dataset, x, y = NULL, colour = NULL)
 scatterplot if numeric vector, barplot if vector of factors
 }
 \description{
-It plots the data depending on the dataset used
+It plots the data depending on the data used
 }
 \examples{
 \dontrun{
