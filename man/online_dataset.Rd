@@ -4,10 +4,12 @@
 \alias{online_dataset}
 \title{online_dataset}
 \usage{
-online_dataset(URL = NULL)
+online_dataset(URL = NULL, dataname = NULL)
 }
 \arguments{
 \item{URL}{url from 'https://vincentarelbundock.github.io/Rdatasets/datasets.html'}
+
+\item{dataname}{character with the name to save the dataset}
 }
 \value{
 data frame
@@ -17,7 +19,7 @@ Gets online dataset in csv format from 'https://vincentarelbundock.github.io/Rda
 }
 \examples{
 \dontrun {
-online_dataset('https://vincentarelbundock.github.io/Rdatasets/csv/boot/amis.csv')
+online_dataset('https://vincentarelbundock.github.io/Rdatasets/csv/boot/amis.csv','car_speedwarn')
 }
 
 }
