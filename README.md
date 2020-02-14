@@ -16,7 +16,7 @@ The package contains two in-built datasets from https://vincentarelbundock.githu
 ```R
 # datasets documentation
 ?PackNi::canada_ab
-?PaclNi::chicken_weight
+?PackNi::chicken_weight
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ The function absrel_freq() computes the absolute ot relative frequency of elemen
 
 #### regr_signif
 
-The function regr_signif() perform a regression by taking a y and x argument, then return if the estimated coefficient are significant or not. It computes again the regression whether the intercept is non-significant, taking it into account
+The function regr_signif() performs a regression by taking a y and x argument, then return whether the estimated coefficients are significant or not. It computes again the regression whether the intercept is non-significant, taking it into account
 
 #### online_dataset
 
